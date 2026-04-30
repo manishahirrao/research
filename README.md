@@ -117,7 +117,7 @@ sugoi-insights/
 Create a `.env.local` file with the following variables:
 
 ```env
-SITE_URL=https://sugoiinsights.com
+SITE_URL=https://sugoi-insights.com
 CONTACT_EMAIL=contact@sugoiinsights.com
 RESEND_API_KEY=your_resend_api_key_here
 ```

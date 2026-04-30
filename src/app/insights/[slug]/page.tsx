@@ -35,7 +35,7 @@ export async function generateMetadata({
     };
   }
 
-  const siteUrl = process.env.SITE_URL || 'https://sugoiinsights.com';
+  const siteUrl = process.env.SITE_URL || 'https://sugoi-insights.com';
   const articleUrl = `${siteUrl}/insights/${article.slug}`;
 
   return {
@@ -78,7 +78,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   }
 
   const relatedArticles = getRelatedArticles(article.slug, article.tags, 3);
-  const siteUrl = process.env.SITE_URL || 'https://sugoiinsights.com';
+  const siteUrl = process.env.SITE_URL || 'https://sugoi-insights.com';
   const articleUrl = `${siteUrl}/insights/${article.slug}`;
 
   // Article JSON-LD

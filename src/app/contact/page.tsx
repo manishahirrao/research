@@ -62,7 +62,7 @@ const breadcrumbJsonLd = {
       '@type': 'ListItem',
       position: 2,
       name: 'Contact',
-      item: `${process.env.SITE_URL || 'https://sugoiinsights.com'}/contact`,
+      item: `${process.env.SITE_URL || 'https://sugoi-insights.com'}/contact`,
     },
   ],
 };

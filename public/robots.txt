@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://sugoiinsights.com
+Host: https://sugoi-insights.com
 
 # Sitemaps
-Sitemap: https://sugoiinsights.com/sitemap.xml
+Sitemap: https://sugoi-insights.com/sitemap.xml
