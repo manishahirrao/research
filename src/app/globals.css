@@ -1,26 +1,383 @@
 @import "tailwindcss";
 
+/* ============================================
+   Sugoi Insights Design System
+   ============================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand Colors */
+  --brand-red: #C8102E;
+  --brand-red-dark: #A00D24;
+  --brand-red-light: #E8374F;
+  
+  /* Neutral Palette */
+  --neutral-black: #0A0A0A;
+  --neutral-dark: #1A1A1A;
+  --neutral-mid: #4A4A4A;
+  --neutral-muted: #767676;
+  --neutral-border: #E2E2E2;
+  --neutral-light: #F5F5F5;
+  --neutral-white: #FFFFFF;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  --shadow-overlay: 0 24px 64px rgba(0, 0, 0, 0.2);
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-card: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 9999px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colors */
+  --color-brand-red: var(--brand-red);
+  --color-brand-red-dark: var(--brand-red-dark);
+  --color-brand-red-light: var(--brand-red-light);
+  --color-neutral-black: var(--neutral-black);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-mid: var(--neutral-mid);
+  --color-neutral-muted: var(--neutral-muted);
+  --color-neutral-border: var(--neutral-border);
+  --color-neutral-light: var(--neutral-light);
+  --color-neutral-white: var(--neutral-white);
+  
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', Menlo, monospace;
+  
+  /* Font Sizes with Fluid Scaling */
+  --font-size-display-xl: clamp(3rem, 6vw, 5.5rem);
+  --font-size-display-lg: clamp(2.5rem, 5vw, 4.5rem);
+  --font-size-display-md: clamp(2rem, 4vw, 3.25rem);
+  --font-size-display-sm: clamp(1.75rem, 3.5vw, 2.5rem);
+  --font-size-display-xs: clamp(1.5rem, 3vw, 2rem);
+  --font-size-body-lg: 1.375rem;
+  --font-size-body-md: 1.125rem;
+  --font-size-body-sm: 1rem;
+  --font-size-label: 0.875rem;
+  
+  /* Spacing Scale */
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-6: 24px;
+  --spacing-8: 32px;
+  --spacing-12: 48px;
+  --spacing-16: 64px;
+  --spacing-24: 96px;
+  --spacing-32: 128px;
+  
+  /* Box Shadows */
+  --box-shadow-sm: var(--shadow-sm);
+  --box-shadow-card: var(--shadow-card);
+  --box-shadow-hover: var(--shadow-hover);
+  --box-shadow-overlay: var(--shadow-overlay);
+  
+  /* Border Radius */
+  --border-radius-sm: var(--radius-sm);
+  --border-radius-card: var(--radius-card);
+  --border-radius-lg: var(--radius-lg);
+  --border-radius-pill: var(--radius-pill);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ============================================
+   Base Resets
+   ============================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-body);
+  color: var(--neutral-dark);
+  background: var(--neutral-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Component Utilities
+   ============================================ */
+
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white transition-all duration-150 rounded-lg;
+    background: var(--brand-red);
+    box-shadow: var(--shadow-card);
+  }
+  
+  .btn-primary:hover {
+    background: var(--brand-red-dark);
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.02);
+  }
+  
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--brand-red);
+    outline-offset: 2px;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3 text-base font-medium transition-all duration-150 rounded-lg;
+    color: var(--brand-red);
+    background: transparent;
+    border: 2px solid var(--brand-red);
+  }
+  
+  .btn-secondary:hover {
+    background: var(--brand-red);
+    color: white;
+  }
+  
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--brand-red);
+    outline-offset: 2px;
+  }
+  
+  /* Cards */
+  .card-hover {
+    transition: transform 150ms cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 150ms cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+  }
+  
+  /* Section Label */
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-wider;
+    color: var(--brand-red);
+    letter-spacing: 0.1em;
+  }
+  
+  /* Texture Grain Overlay */
+  .texture-grain {
+    position: relative;
+  }
+  
+  .texture-grain::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ============================================
+   Prose Styles (for MDX blog content)
+   ============================================ */
+
+.prose-sugoi {
+  @apply max-w-none;
+  font-family: var(--font-body);
+  font-size: var(--font-size-body-md);
+  line-height: 1.7;
+  color: var(--neutral-dark);
+}
+
+.prose-sugoi h1,
+.prose-sugoi h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--neutral-black);
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose-sugoi h3,
+.prose-sugoi h4 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--neutral-black);
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.prose-sugoi p {
+  margin-bottom: 1.25em;
+}
+
+.prose-sugoi a {
+  color: var(--brand-red);
+  text-decoration: underline;
+  text-decoration-color: var(--brand-red-light);
+  text-underline-offset: 2px;
+  transition: text-decoration-color 200ms ease;
+}
+
+.prose-sugoi a:hover {
+  text-decoration-color: var(--brand-red);
+}
+
+.prose-sugoi blockquote {
+  border-left: 4px solid var(--brand-red);
+  padding-left: 1.5em;
+  margin: 2em 0;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--neutral-mid);
+}
+
+.prose-sugoi blockquote::before {
+  content: '"';
+  font-size: 2em;
+  color: var(--brand-red);
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 0.1em;
+}
+
+.prose-sugoi ul,
+.prose-sugoi ol {
+  margin: 1.5em 0;
+  padding-left: 1.5em;
+}
+
+.prose-sugoi li {
+  margin-bottom: 0.5em;
+}
+
+.prose-sugoi code {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+  background: var(--neutral-light);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-sm);
+}
+
+.prose-sugoi pre {
+  background: var(--neutral-dark);
+  color: var(--neutral-light);
+  padding: 1.5em;
+  border-radius: var(--radius-card);
+  overflow-x: auto;
+  margin: 2em 0;
+}
+
+.prose-sugoi pre code {
+  background: none;
+  padding: 0;
+}
+
+/* ============================================
+   Reading Progress Bar
+   ============================================ */
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--brand-red);
+  z-index: 100;
+  transition: width 100ms ease-out;
+}
+
+/* ============================================
+   Focus Visible Styles
+   ============================================ */
+
+*:focus-visible {
+  outline: 2px solid var(--brand-red);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   Custom Animations
+   ============================================ */
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes pulse-slower {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 10s ease-in-out infinite;
+}
+
+.animate-pulse-slower {
+  animation: pulse-slower 15s ease-in-out infinite;
+}
+
+.animate-scroll {
+  animation: scroll-horizontal 20s linear infinite;
+}
+
+/* Gradient utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Scrollbar utilities */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
