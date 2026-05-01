@@ -1,7 +1,9 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: 'export',
   images: {
+    unoptimized: true, // Required for static export
     remotePatterns: [
       {
         protocol: 'https',
@@ -9,7 +11,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // Security headers
+  // Security headers (Note: These won't work with static export, configure on your hosting)
   async headers() {
     return [
       {
