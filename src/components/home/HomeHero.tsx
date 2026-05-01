@@ -45,7 +45,7 @@ export function HomeHero() {
           </SlideIn>
 
           <SlideIn direction="up" delay={0.12}>
-            <h1 className="mt-6 font-display text-display-xl font-bold text-white leading-tight">
+            <h1 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
               Transforming Data Into
               <br />
               <span className="text-brand-red-light">Strategic Advantage</span>
@@ -53,7 +53,7 @@ export function HomeHero() {
           </SlideIn>
 
           <SlideIn direction="up" delay={0.24}>
-            <p className="mt-8 text-body-lg text-neutral-light max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-8 text-base md:text-lg lg:text-xl text-neutral-light max-w-2xl mx-auto leading-relaxed">
               Full-service market research delivering actionable insights across FMCG, media,
               cosmetics, automotive, and real estate sectors. Data-driven decisions for sustainable
               growth.

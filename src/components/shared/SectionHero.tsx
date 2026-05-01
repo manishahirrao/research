@@ -64,7 +64,7 @@ export function SectionHero({
           )}
           <h1
             className={cn(
-              'mt-4 font-display text-display-lg font-bold',
+              'mt-4 font-display text-3xl md:text-4xl lg:text-5xl font-bold',
               gradient || backgroundImage ? 'text-white' : 'text-neutral-black',
             )}
           >
@@ -73,7 +73,7 @@ export function SectionHero({
           {subtitle && (
             <p
               className={cn(
-                'mt-6 text-body-lg',
+                'mt-6 text-base md:text-lg lg:text-xl',
                 gradient || backgroundImage ? 'text-neutral-light' : 'text-neutral-mid',
               )}
             >

@@ -140,6 +140,7 @@ export function getRelatedArticles(
 
 /**
  * Get all unique tags from all articles
+ * Returns only primary industry tags for cleaner filtering
  */
 export function getAllTags(): string[] {
   const allArticles = getAllArticles();
@@ -149,7 +150,21 @@ export function getAllTags(): string[] {
     article.tags.forEach((tag) => tagsSet.add(tag));
   });
 
-  return Array.from(tagsSet).sort();
+  // Define priority tags (industries and key topics)
+  const priorityTags = [
+    'FMCG',
+    'Media',
+    'Cosmetics',
+    'Automotive',
+    'Real Estate',
+    'Consumer Trends',
+    'Market Research',
+  ];
+
+  // Filter to only include priority tags that exist in articles
+  const filteredTags = priorityTags.filter((tag) => tagsSet.has(tag));
+
+  return filteredTags;
 }
 
 /**

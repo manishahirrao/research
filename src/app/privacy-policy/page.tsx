@@ -141,12 +141,12 @@ export default function PrivacyPolicyPage() {
               </li>
             </ul>
             <p className="text-neutral-mid text-body-md leading-relaxed mb-6">
-              To exercise these rights, please contact us at{' '}
+              To exercise these rights, please contact us by phone at{' '}
               <a
-                href="mailto:apresearchbusiness@gmail.com"
+                href="tel:+917304275983"
                 className="text-brand-red hover:text-brand-red-dark underline"
               >
-                apresearchbusiness@gmail.com
+                +91 7304275983
               </a>
               .
             </p>
@@ -208,15 +208,6 @@ export default function PrivacyPolicyPage() {
               </p>
               <p className="text-neutral-mid text-body-sm mb-1">
                 Station Road, Nallasopara(W), Mumbai - 401203
-              </p>
-              <p className="text-neutral-mid text-body-sm mb-1">
-                Email:{' '}
-                <a
-                  href="mailto:apresearchbusiness@gmail.com"
-                  className="text-brand-red hover:text-brand-red-dark underline"
-                >
-                  apresearchbusiness@gmail.com
-                </a>
               </p>
               <p className="text-neutral-mid text-body-sm">Phone: +91 7304275983</p>
             </div>

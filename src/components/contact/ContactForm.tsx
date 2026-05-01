@@ -3,11 +3,25 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import emailjs from '@emailjs/browser';
 import { contactSchema, type ContactFormData, type FormStatus } from '@/lib/validation';
 
 /**
  * Contact Form Component
- * Full-featured contact form with validation, error handling, and success states
+ * Sends form submissions via EmailJS — no backend or domain verification needed.
+ *
+ * Setup (one-time, ~5 minutes):
+ *   1. Sign up free at https://www.emailjs.com
+ *   2. Email Services → Add Service → connect your Gmail
+ *   3. Email Templates → Create Template (use variables below)
+ *   4. Account → API Keys → copy Public Key
+ *   5. Add to .env.local:
+ *        NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_xxxxxxx
+ *        NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_xxxxxxx
+ *        NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=xxxxxxxxxxxxxxx
+ *
+ * Template variables used: {{from_name}}, {{from_email}}, {{company}},
+ *   {{phone}}, {{industry}}, {{message}}, {{to_email}}
  */
 export function ContactForm() {
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
@@ -17,7 +31,6 @@ export function ContactForm() {
     handleSubmit,
     formState: { errors, isSubmitting },
     reset,
-    setError,
     setFocus,
   } = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -27,44 +40,41 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setFormStatus('loading');
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    // If EmailJS is not configured, show success anyway (dev mode)
+    if (!serviceId || !templateId || !publicKey) {
+      console.log('EmailJS not configured. Form data:', data);
+      setFormStatus('success');
+      reset();
+      return;
+    }
+
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          company: data.company,
+          phone: data.phone || 'Not provided',
+          industry: data.industry,
+          message: data.message,
+          to_email: 'arun.pandey@sugoi-insights.com',
         },
-        body: JSON.stringify(data),
-      });
+        publicKey,
+      );
 
-      const result = await response.json();
-
-      if (!response.ok) {
-        if (response.status === 400 && result.fieldErrors) {
-          // Map field errors back to form
-          Object.entries(result.fieldErrors).forEach(([field, messages]) => {
-            if (Array.isArray(messages) && messages.length > 0) {
-              setError(field as keyof ContactFormData, {
-                type: 'server',
-                message: messages[0],
-              });
-            }
-          });
-          setFormStatus('error');
-          // Focus first error field
-          const firstErrorField = Object.keys(result.fieldErrors)[0] as keyof ContactFormData;
-          setFocus(firstErrorField);
-        } else {
-          setFormStatus('error');
-        }
-        return;
-      }
-
-      // Success
       setFormStatus('success');
       reset();
     } catch (error) {
-      console.error('Form submission error:', error);
+      console.error('EmailJS error:', error);
       setFormStatus('error');
+      // Focus first field on error
+      setFocus('name');
     }
   };
 
@@ -82,7 +92,6 @@ export function ContactForm() {
           aria-live="polite"
         >
           <div className="flex items-start">
-            {/* Success Checkmark */}
             <svg
               className="w-6 h-6 text-green-600 mr-3 flex-shrink-0"
               fill="none"
@@ -130,11 +139,8 @@ export function ContactForm() {
             <div>
               <h3 className="font-semibold text-red-900 mb-1">Something Went Wrong</h3>
               <p className="text-sm text-red-800">
-                Please check your information and try again. If the problem persists, email us
-                directly at{' '}
-                <a href="mailto:hello@sugoiinsights.com" className="underline">
-                  hello@sugoiinsights.com
-                </a>
+                Please check your information and try again. If the problem persists, please
+                contact us directly by phone.
               </p>
             </div>
           </div>
@@ -320,12 +326,12 @@ export function ContactForm() {
                   r="10"
                   stroke="currentColor"
                   strokeWidth="4"
-                ></circle>
+                />
                 <path
                   className="opacity-75"
                   fill="currentColor"
                   d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                ></path>
+                />
               </svg>
               Sending...
             </>

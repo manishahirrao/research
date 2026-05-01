@@ -17,15 +17,15 @@ export const navItems: NavigationItem[] = [
  * Company contact information
  */
 export const contactInfo = {
-  email: 'apresearchbusiness@gmail.com',
+  email: 'contact@sugoi-insights.com',
   phone: '+91 7304275983',
   address: 'Office no:118, 1st Floor, Sonal Shopping Mall, Station Road, Nallasopara(W), Mumbai - 401203',
   city: 'Mumbai, India',
   website: 'sugoi-insights.com',
   linkedin: 'https://www.linkedin.com/company/sugoi-insights',
-  twitter: 'https://twitter.com/sugoiinsights',
+  twitter: 'https://twitter.com/sugoi_insights',
   facebook: 'https://www.facebook.com/sugoiinsights',
-  instagram: 'https://www.instagram.com/sugoiinsights',
+  instagram: 'https://www.instagram.com/sugoi_insights',
 };
 
 /**
