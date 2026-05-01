@@ -45,7 +45,7 @@ export function StorySection() {
                   Founded over a decade ago, Sugoi Insights emerged from a simple belief: every
                   business decision deserves to be informed by real human insight, not assumptions.
                   What began as a boutique research consultancy has evolved into a full-service
-                  agency trusted by leading brands across five key sectors.
+                  agency trusted by leading brands across 16 key industries.
                 </p>
 
                 <p>

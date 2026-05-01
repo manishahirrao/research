@@ -13,7 +13,7 @@ const faqs: FaqItem[] = [
   {
     question: 'What industries do you specialize in?',
     answer:
-      'We specialize in five key sectors: FMCG (Fast-Moving Consumer Goods), Media & Entertainment, Cosmetics & Personal Care, Automotive, and Real Estate. Our deep domain expertise in these industries allows us to deliver insights that are both strategically relevant and actionable.',
+      'We specialize in 16 key industries: FMCG, Media & Entertainment, Cosmetics & Personal Care, Automotive, Real Estate, Fashion & Apparel, Machine Tools & Manufacturing, Aerospace, Food & Beverage, Sports Equipment, Woodcutting Machinery, Furniture, Oil & Gas, Plastics, Ceramics & Glass, and Jewellery. Our deep domain expertise in these industries allows us to deliver insights that are both strategically relevant and actionable.',
   },
   {
     question: 'How long does a typical research project take?',

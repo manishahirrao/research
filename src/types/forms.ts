@@ -7,7 +7,7 @@ export interface ContactFormData {
   email: string;
   company: string;
   phone?: string;
-  industry: 'FMCG' | 'Media' | 'Cosmetics' | 'Automotive' | 'Real Estate' | 'Other';
+  industry: 'FMCG' | 'Media' | 'Cosmetics' | 'Automotive' | 'Real Estate' | 'Fashion' | 'Machine Tools' | 'Aerospace' | 'Food & Beverage' | 'Sports Equipment' | 'Woodcutting Machinery' | 'Furniture' | 'Oil & Gas' | 'Plastics' | 'Ceramics & Glass' | 'Jewellery' | 'Other';
   message: string;
 }
 

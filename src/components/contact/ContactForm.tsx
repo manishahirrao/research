@@ -199,6 +199,17 @@ export function ContactForm() {
             <option value="Cosmetics & Personal Care">Cosmetics & Personal Care</option>
             <option value="Automotive">Automotive</option>
             <option value="Real Estate">Real Estate</option>
+            <option value="Fashion & Apparel">Fashion & Apparel</option>
+            <option value="Machine Tools & Manufacturing">Machine Tools & Manufacturing</option>
+            <option value="Aerospace">Aerospace</option>
+            <option value="Food & Beverage">Food & Beverage</option>
+            <option value="Sports Equipment">Sports Equipment</option>
+            <option value="Woodcutting Machinery">Woodcutting Machinery</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Oil & Gas">Oil & Gas</option>
+            <option value="Plastics">Plastics</option>
+            <option value="Ceramics & Glass">Ceramics & Glass</option>
+            <option value="Jewellery">Jewellery</option>
             <option value="Other">Other</option>
           </select>
           {errors.industry && (

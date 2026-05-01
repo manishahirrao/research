@@ -19,7 +19,7 @@ const pages: PageMetadata[] = [
     path: '/',
     title: 'Sugoi Insights | Market Research Agency — Data-Driven Growth',
     description:
-      'Transform your data into strategic advantage. Expert market research across FMCG, Media, Cosmetics, Automotive, and Real Estate sectors.',
+      'Transform your data into strategic advantage. Expert market research across 16 industries including FMCG, Media, Cosmetics, Automotive, Real Estate, Fashion, Machine Tools, Aerospace, Food & Beverage, and more.',
     hasJsonLd: true,
     jsonLdTypes: ['Organization'],
   },
@@ -27,7 +27,7 @@ const pages: PageMetadata[] = [
     path: '/about',
     title: 'About Us — Market Research Experts | Sugoi Insights',
     description:
-      'Meet the team behind data-driven insights. 10+ years of market research expertise across five key industry sectors, delivering strategic advantage.',
+      'Meet the team behind data-driven insights. 10+ years of market research expertise across 16 key industries, delivering strategic advantage.',
     hasJsonLd: true,
     jsonLdTypes: ['BreadcrumbList'],
   },
@@ -41,9 +41,9 @@ const pages: PageMetadata[] = [
   },
   {
     path: '/industries',
-    title: 'Industry Expertise — Five Key Sectors | Sugoi Insights',
+    title: 'Industry Expertise — 16 Key Sectors | Sugoi Insights',
     description:
-      'Deep sector expertise across FMCG, Media & Entertainment, Cosmetics & Personal Care, Automotive, and Real Estate. Industry-specific market research insights.',
+      'Deep sector expertise across 16 industries including FMCG, Media, Cosmetics, Automotive, Real Estate, Fashion, Machine Tools, Aerospace, Food & Beverage, Sports Equipment, Furniture, Oil & Gas, Plastics, Ceramics & Glass, Jewellery, and Woodcutting Machinery.',
     hasJsonLd: true,
     jsonLdTypes: ['BreadcrumbList'],
   },

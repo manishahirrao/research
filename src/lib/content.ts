@@ -157,6 +157,8 @@ export function getAllTags(): string[] {
     'Cosmetics',
     'Automotive',
     'Real Estate',
+    'Fashion',
+    'Machine Tools',
     'Consumer Trends',
     'Market Research',
   ];

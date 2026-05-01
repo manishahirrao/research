@@ -10,11 +10,11 @@ import { CtaBanner } from '@/components/home/CtaBanner';
 export const metadata: Metadata = {
   title: 'Sugoi Insights | Market Research Agency — Data-Driven Growth',
   description:
-    'Transform your business with data-driven insights. Sugoi Insights delivers world-class market research across FMCG, media, cosmetics, automotive, and real estate sectors.',
+    'Transform your business with data-driven insights. Sugoi Insights delivers world-class market research across 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, sports equipment, furniture, oil & gas, plastics, ceramics & glass, jewellery, and woodcutting machinery.',
   openGraph: {
     title: 'Sugoi Insights | Market Research Agency — Data-Driven Growth',
     description:
-      'Transform your business with data-driven insights. Full-service market research across five key sectors.',
+      'Transform your business with data-driven insights. Full-service market research across 16 key industries.',
     type: 'website',
     url: '/',
   },
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sugoi Insights | Market Research Agency — Data-Driven Growth',
     description:
-      'Transform your business with data-driven insights. Full-service market research across five key sectors.',
+      'Transform your business with data-driven insights. Full-service market research across 16 key industries.',
   },
 };
 

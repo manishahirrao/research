@@ -89,7 +89,7 @@ export function buildOrganizationJsonLd() {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-      'Market research agency delivering data-driven insights across FMCG, Media, Cosmetics, Automotive, and Real Estate sectors.',
+      'Market research agency delivering data-driven insights across 16 industries including FMCG, Media, Cosmetics, Automotive, Real Estate, Fashion, Machine Tools, Aerospace, Food & Beverage, Sports Equipment, Furniture, Oil & Gas, Plastics, Ceramics & Glass, Jewellery, and Woodcutting Machinery.',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'London',

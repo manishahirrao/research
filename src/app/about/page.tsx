@@ -11,11 +11,11 @@ import { CtaBanner } from '@/components/home/CtaBanner';
 export const metadata: Metadata = {
   title: 'About Us — Market Research Experts | Sugoi Insights',
   description:
-    'Learn about Sugoi Insights - a full-service market research agency with over 10 years of experience delivering data-driven insights across FMCG, media, cosmetics, automotive, and real estate sectors.',
+    'Learn about Sugoi Insights - a full-service market research agency with over 10 years of experience delivering data-driven insights across 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, sports equipment, furniture, oil & gas, plastics, ceramics & glass, jewellery, and woodcutting machinery.',
   openGraph: {
     title: 'About Us | Sugoi Insights',
     description:
-      'Learn about our story, values, and methodology. Over 10 years of research excellence across five key sectors.',
+      'Learn about our story, values, and methodology. Over 10 years of research excellence across 16 key industries.',
     type: 'website',
     url: '/about',
   },
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'About Us | Sugoi Insights',
     description:
-      'Learn about our story, values, and methodology. Over 10 years of research excellence.',
+      'Learn about our story, values, and methodology. Over 10 years of research excellence across 16 key industries.',
   },
 };
 
@@ -59,7 +59,7 @@ export default function AboutPage() {
       <SectionHero
         label="Who We Are"
         title="About Sugoi Insights"
-        subtitle="Over a decade of research excellence, delivering insights that drive strategic advantage across five key sectors."
+        subtitle="Over a decade of research excellence, delivering insights that drive strategic advantage across 16 key industries."
         gradient={true}
         centered={false}
         backgroundImage="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=2070&auto=format&fit=crop"

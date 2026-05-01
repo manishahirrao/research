@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: '%s | Sugoi Insights',
   },
   description:
-    'Full-service market research agency specializing in FMCG, media, cosmetics, automotive, and real estate sectors. Data-driven insights for strategic growth.',
+    'Full-service market research agency specializing in 16 industries: FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, sports equipment, woodcutting machinery, furniture, oil & gas, plastics, ceramics & glass, and jewellery. Data-driven insights for strategic growth.',
   keywords: [
     'market research',
     'consumer insights',
@@ -40,6 +40,15 @@ export const metadata: Metadata = {
     'automotive research',
     'real estate research',
     'cosmetics research',
+    'fashion research',
+    'machine tools research',
+    'aerospace research',
+    'food beverage research',
+    'sports equipment research',
+    'furniture research',
+    'oil gas research',
+    'plastics research',
+    'jewellery research',
   ],
   authors: [{ name: 'Sugoi Insights' }],
   creator: 'Sugoi Insights',
@@ -51,7 +60,7 @@ export const metadata: Metadata = {
     siteName: 'Sugoi Insights',
     title: 'Sugoi Insights | Market Research Agency',
     description:
-      'Full-service market research agency specializing in FMCG, media, cosmetics, automotive, and real estate sectors.',
+      'Full-service market research agency specializing in 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, and more.',
     images: [
       {
         url: '/logo.png',
@@ -65,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Sugoi Insights | Market Research Agency',
     description:
-      'Full-service market research agency specializing in FMCG, media, cosmetics, automotive, and real estate sectors.',
+      'Full-service market research agency specializing in 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, and more.',
     images: ['/logo.png'],
   },
   robots: {
@@ -89,7 +98,7 @@ const organizationJsonLd = {
   url: process.env.SITE_URL || 'https://sugoi-insights.com',
   logo: `${process.env.SITE_URL || 'https://sugoi-insights.com'}/images/logo.svg`,
   description:
-    'Full-service market research agency specializing in FMCG, media, cosmetics, automotive, and real estate sectors.',
+    'Full-service market research agency specializing in 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, and more.',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+91-XXXXXXXXXX',

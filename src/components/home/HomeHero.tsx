@@ -54,8 +54,8 @@ export function HomeHero() {
 
           <SlideIn direction="up" delay={0.24}>
             <p className="mt-8 text-base md:text-lg lg:text-xl text-neutral-light max-w-2xl mx-auto leading-relaxed">
-              Full-service market research delivering actionable insights across FMCG, media,
-              cosmetics, automotive, and real estate sectors. Data-driven decisions for sustainable
+              Full-service market research delivering actionable insights across 16 industries including FMCG, media,
+              cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, sports equipment, and more. Data-driven decisions for sustainable
               growth.
             </p>
           </SlideIn>

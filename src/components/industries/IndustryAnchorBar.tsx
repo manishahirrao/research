@@ -14,6 +14,17 @@ const industries: Industry[] = [
   { id: 'cosmetics', name: 'Cosmetics' },
   { id: 'automotive', name: 'Automotive' },
   { id: 'real-estate', name: 'Real Estate' },
+  { id: 'fashion', name: 'Fashion' },
+  { id: 'machine-tools', name: 'Machine Tools' },
+  { id: 'aerospace', name: 'Aerospace' },
+  { id: 'food-beverage', name: 'Food & Beverage' },
+  { id: 'sports-equipment', name: 'Sports Equipment' },
+  { id: 'woodcutting-machinery', name: 'Woodcutting' },
+  { id: 'furniture', name: 'Furniture' },
+  { id: 'oil-gas', name: 'Oil & Gas' },
+  { id: 'plastics', name: 'Plastics' },
+  { id: 'ceramics-glass', name: 'Ceramics & Glass' },
+  { id: 'jewellery', name: 'Jewellery' },
 ];
 
 /**
@@ -64,17 +75,17 @@ export function IndustryAnchorBar() {
 
   return (
     <nav
-      className="sticky top-20 z-40 bg-white border-b border-neutral-border shadow-sm hidden md:block"
+      className="sticky top-20 z-40 bg-white border-b border-neutral-border shadow-sm"
       aria-label="Industry navigation"
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
-        <div className="flex items-center justify-center space-x-2 py-4">
+        <div className="flex items-center gap-2 py-4 overflow-x-auto scrollbar-hide">
           {industries.map((industry) => (
             <button
               key={industry.id}
               onClick={() => handleClick(industry.id)}
               className={cn(
-                'px-6 py-2 rounded-pill text-sm font-medium transition-all duration-200',
+                'px-3 py-2 rounded-pill text-xs md:text-sm font-medium transition-all duration-200 whitespace-nowrap flex-shrink-0',
                 activeSection === industry.id
                   ? 'bg-brand-red text-white'
                   : 'bg-neutral-light text-neutral-mid hover:bg-neutral-border hover:text-neutral-black',

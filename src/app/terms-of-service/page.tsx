@@ -52,7 +52,7 @@ export default function TermsOfServicePage() {
               <li>Data collection through qualitative and quantitative methods</li>
               <li>Advanced analytics and data interpretation</li>
               <li>Strategic recommendations and insights reporting</li>
-              <li>Industry-specific research across FMCG, media, cosmetics, automotive, and real estate sectors</li>
+              <li>Industry-specific research across 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, sports equipment, woodcutting machinery, furniture, oil & gas, plastics, ceramics & glass, and jewellery</li>
             </ul>
 
             <h2 className="font-display text-display-sm text-neutral-black mt-12 mb-4">

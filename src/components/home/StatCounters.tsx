@@ -21,7 +21,7 @@ const stats: Stat[] = [
     label: 'Years of Research Excellence',
   },
   {
-    target: 5,
+    target: 16,
     suffix: '',
     label: 'Industry Sectors',
   },
