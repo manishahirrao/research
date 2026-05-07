@@ -7,7 +7,7 @@ import { contactSchema, type ContactFormData, type FormStatus } from '@/lib/vali
 
 /**
  * Contact Form Component
- * Simple form that shows success message after submission
+ * Sends form data to WhatsApp for lead generation
  */
 export function ContactForm() {
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
@@ -25,10 +25,27 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     setFormStatus('loading');
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    // Format message for WhatsApp
+    const whatsappMessage = `*New Lead from Sugoi Insights Website*
 
-    console.log('Form data:', data);
+*Name:* ${data.name}
+*Email:* ${data.email}
+*Company:* ${data.company}
+${data.phone ? `*Phone:* ${data.phone}` : ''}
+*Industry:* ${data.industry}
+
+*Message:*
+${data.message}`;
+
+    // Encode message for WhatsApp URL
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappNumber = '917304275983'; // WhatsApp number with country code (no + or spaces)
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank');
+
+    // Show success message
     setFormStatus('success');
     reset();
   };
@@ -58,10 +75,10 @@ export function ContactForm() {
             </svg>
           </div>
           <h3 className="font-display text-2xl font-bold text-green-900 mb-2">
-            Message Sent Successfully!
+            Message Sent!
           </h3>
           <p className="text-green-800 mb-6">
-            Thank you for reaching out. We'll get back to you within 24 hours.
+            Your message has been sent via WhatsApp. We'll get back to you within 24 hours.
           </p>
           <button
             onClick={() => setFormStatus('idle')}
