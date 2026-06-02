@@ -147,6 +147,13 @@ export default function PrivacyPolicyPage() {
                 className="text-brand-red hover:text-brand-red-dark underline"
               >
                 +91 7304275983
+              </a>{' '}
+              or{' '}
+              <a
+                href="tel:+919326676104"
+                className="text-brand-red hover:text-brand-red-dark underline"
+              >
+                +91 9326676104
               </a>
               .
             </p>
@@ -209,7 +216,7 @@ export default function PrivacyPolicyPage() {
               <p className="text-neutral-mid text-body-sm mb-1">
                 Station Road, Nallasopara(W), Mumbai - 401203
               </p>
-              <p className="text-neutral-mid text-body-sm">Phone: +91 7304275983</p>
+              <p className="text-neutral-mid text-body-sm">Phone: +91 7304275983 / +91 9326676104</p>
             </div>
           </div>
         </div>

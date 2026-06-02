@@ -101,7 +101,7 @@ const organizationJsonLd = {
     'Full-service market research agency specializing in 16 industries including FMCG, media, cosmetics, automotive, real estate, fashion, machine tools, aerospace, food & beverage, and more.',
   contactPoint: {
     '@type': 'ContactPoint',
-    telephone: '+91-XXXXXXXXXX',
+    telephone: ['+91 7304275983', '+91 9326676104'],
     contactType: 'Customer Service',
     availableLanguage: 'English',
   },

@@ -269,7 +269,7 @@ export default function CookiePolicyPage() {
               <p className="text-neutral-mid text-body-sm mb-1">
                 Station Road, Nallasopara(W), Mumbai - 401203
               </p>
-              <p className="text-neutral-mid text-body-sm">Phone: +91 7304275983</p>
+              <p className="text-neutral-mid text-body-sm">Phone: +91 7304275983 / +91 9326676104</p>
             </div>
           </div>
         </div>

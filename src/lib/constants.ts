@@ -18,7 +18,9 @@ export const navItems: NavigationItem[] = [
  */
 export const contactInfo = {
   email: 'contact@sugoi-insights.com',
+  email2: 'arun.kumar@sugoi-insights.com',
   phone: '+91 7304275983',
+  phone2: '+91 9326676104',
   address: 'Office no:118, 1st Floor, Sonal Shopping Mall, Station Road, Nallasopara(W), Mumbai - 401203',
   city: 'Mumbai, India',
   website: 'sugoi-insights.com',

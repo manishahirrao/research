@@ -97,9 +97,9 @@ export function buildOrganizationJsonLd() {
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+91 7304275983',
+      telephone: ['+91 7304275983', '+91 9326676104'],
       contactType: 'customer service',
-      email: 'apresearchbusiness@gmail.com',
+      email: ['apresearchbusiness@gmail.com', 'arun.kumar@sugoi-insights.com'],
       availableLanguage: 'English',
     },
     sameAs: ['https://linkedin.com/company/sugoi-insights'],
@@ -168,8 +168,8 @@ export function buildContactPageJsonLd() {
     mainEntity: {
       '@type': 'Organization',
       name: SITE_NAME,
-      email: 'apresearchbusiness@gmail.com',
-      telephone: '+91 7304275983',
+      email: ['apresearchbusiness@gmail.com', 'arun.kumar@sugoi-insights.com'],
+      telephone: ['+91 7304275983', '+91 9326676104'],
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'London',

@@ -39,12 +39,63 @@ export function ContactInfo() {
           </div>
           <div className="ml-4">
             <h3 className="text-sm font-semibold text-neutral-black mb-1">Phone</h3>
-            <a
-              href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
-              className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
+            <div className="flex flex-col sm:flex-row sm:items-center space-y-2 sm:space-y-0">
+              <a
+                href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}
+                className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
+              >
+                {contactInfo.phone}
+              </a>
+              {contactInfo.phone2 && (
+                <>
+                  <span className="hidden sm:inline mx-3 text-neutral-mid">|</span>
+                  <a
+                    href={`tel:${contactInfo.phone2.replace(/\s/g, '')}`}
+                    className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
+                  >
+                    {contactInfo.phone2}
+                  </a>
+                </>
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex items-start">
+          <div className="flex-shrink-0 w-12 h-12 bg-brand-red/10 rounded-lg flex items-center justify-center">
+            <svg
+              className="w-6 h-6 text-brand-red"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
             >
-              {contactInfo.phone}
-            </a>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              />
+            </svg>
+          </div>
+          <div className="ml-4">
+            <h3 className="text-sm font-semibold text-neutral-black mb-1">Email</h3>
+            <div className="flex flex-col space-y-1">
+              <a
+                href={`mailto:${contactInfo.email}`}
+                className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
+              >
+                {contactInfo.email}
+              </a>
+              {contactInfo.email2 && (
+                <a
+                  href={`mailto:${contactInfo.email2}`}
+                  className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
+                >
+                  {contactInfo.email2}
+                </a>
+              )}
+            </div>
           </div>
         </div>
 

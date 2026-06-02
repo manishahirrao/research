@@ -3,6 +3,7 @@
 import React from 'react';
 import { Button } from '@/components/shared/Button';
 import { FadeIn } from '@/components/animations/FadeIn';
+import { contactInfo } from '@/lib/constants';
 
 /**
  * CTA Banner Component
@@ -24,7 +25,7 @@ export function CtaBanner() {
               Let's transform your business challenges into strategic opportunities with data-driven
               insights.
             </p>
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center">
               <Button
                 asChild
                 href="/contact"
@@ -34,6 +35,20 @@ export function CtaBanner() {
               >
                 Contact Us Today
               </Button>
+              
+              <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-white/90">
+                <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors font-medium">
+                  {contactInfo.email}
+                </a>
+                {contactInfo.email2 && (
+                  <>
+                    <span className="hidden sm:inline opacity-60">|</span>
+                    <a href={`mailto:${contactInfo.email2}`} className="hover:text-white transition-colors font-medium">
+                      {contactInfo.email2}
+                    </a>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         </FadeIn>

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/shared/Button';
 import { SectionLabel } from '@/components/shared/SectionLabel';
 import { SlideIn } from '@/components/animations/SlideIn';
+import { contactInfo } from '@/lib/constants';
 
 /**
  * Home Hero Component
@@ -68,6 +69,20 @@ export function HomeHero() {
               <Button asChild href="/services" variant="secondary" size="lg">
                 Explore Our Services
               </Button>
+            </div>
+            
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-neutral-light/80">
+              <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
+                {contactInfo.email}
+              </a>
+              {contactInfo.email2 && (
+                <>
+                  <span className="hidden sm:inline opacity-60">|</span>
+                  <a href={`mailto:${contactInfo.email2}`} className="hover:text-white transition-colors">
+                    {contactInfo.email2}
+                  </a>
+                </>
+              )}
             </div>
           </SlideIn>
 

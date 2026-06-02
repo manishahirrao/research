@@ -39,7 +39,7 @@ ${data.message}`;
 
     // Encode message for WhatsApp URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappNumber = '917304275983'; // WhatsApp number with country code (no + or spaces)
+    const whatsappNumber = '919326676104'; // WhatsApp number with country code (no + or spaces)
     const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
     // Open WhatsApp in new tab
