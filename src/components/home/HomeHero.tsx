@@ -75,14 +75,6 @@ export function HomeHero() {
               <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors">
                 {contactInfo.email}
               </a>
-              {contactInfo.email2 && (
-                <>
-                  <span className="hidden sm:inline opacity-60">|</span>
-                  <a href={`mailto:${contactInfo.email2}`} className="hover:text-white transition-colors">
-                    {contactInfo.email2}
-                  </a>
-                </>
-              )}
             </div>
           </SlideIn>
 

@@ -40,14 +40,6 @@ export function CtaBanner() {
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors font-medium">
                   {contactInfo.email}
                 </a>
-                {contactInfo.email2 && (
-                  <>
-                    <span className="hidden sm:inline opacity-60">|</span>
-                    <a href={`mailto:${contactInfo.email2}`} className="hover:text-white transition-colors font-medium">
-                      {contactInfo.email2}
-                    </a>
-                  </>
-                )}
               </div>
             </div>
           </div>

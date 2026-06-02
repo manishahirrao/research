@@ -87,14 +87,6 @@ export function ContactInfo() {
               >
                 {contactInfo.email}
               </a>
-              {contactInfo.email2 && (
-                <a
-                  href={`mailto:${contactInfo.email2}`}
-                  className="text-body-md text-brand-red hover:text-brand-red-dark transition-colors"
-                >
-                  {contactInfo.email2}
-                </a>
-              )}
             </div>
           </div>
         </div>

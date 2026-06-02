@@ -37,7 +37,7 @@ const contactPageJsonLd = {
   mainEntity: {
     '@type': 'Organization',
     name: 'Sugoi Insights',
-    email: ['apresearchbusiness@gmail.com', 'arun.kumar@sugoi-insights.com'],
+    email: 'arun.kumar@sugoi-insights.com',
     telephone: ['+91 7304275983', '+91 9326676104'],
     address: {
       '@type': 'PostalAddress',

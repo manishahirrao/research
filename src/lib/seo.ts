@@ -99,7 +99,7 @@ export function buildOrganizationJsonLd() {
       '@type': 'ContactPoint',
       telephone: ['+91 7304275983', '+91 9326676104'],
       contactType: 'customer service',
-      email: ['apresearchbusiness@gmail.com', 'arun.kumar@sugoi-insights.com'],
+      email: 'arun.kumar@sugoi-insights.com',
       availableLanguage: 'English',
     },
     sameAs: ['https://linkedin.com/company/sugoi-insights'],
@@ -168,7 +168,7 @@ export function buildContactPageJsonLd() {
     mainEntity: {
       '@type': 'Organization',
       name: SITE_NAME,
-      email: ['apresearchbusiness@gmail.com', 'arun.kumar@sugoi-insights.com'],
+      email: 'arun.kumar@sugoi-insights.com',
       telephone: ['+91 7304275983', '+91 9326676104'],
       address: {
         '@type': 'PostalAddress',
